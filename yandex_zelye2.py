@@ -14,7 +14,7 @@ def repl(replicant, lst_zel):
         if key == 1:
             count1 += lst_zel[replicant - 3][1]
         elif key == 2:
-            count2 -= lst_zel[replicant - 3][2]
+            count2 += lst_zel[replicant - 3][2]
         else:
             for i in range(lst_zel[replicant - 3][key]):
                 sum_x -= 1
