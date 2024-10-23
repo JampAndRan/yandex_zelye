@@ -4,7 +4,6 @@ lst_zel=[]
 
 def repl(replicant, lst_zel):
     global sum_x
-    sum_x-=1
     global count1
     global count2
     for key in lst_zel[replicant - 3].keys():
@@ -18,6 +17,7 @@ def repl(replicant, lst_zel):
             count2 -= lst_zel[replicant - 3][2]
         else:
             for i in range(lst_zel[replicant - 3][key]):
+                sum_x -= 1
                 repl(key, lst_zel)
 
 
