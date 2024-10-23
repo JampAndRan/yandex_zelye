@@ -7,23 +7,18 @@ def repl(replicant, lst_zel):
     sum_x-=1
     global count1
     global count2
-    try:
-        for key in lst_zel[replicant - 3].keys():
-            if sum_x < 0:
-                count1 = 0
-                count2 = 0
-                return
-            if key == 1:
-                count1 += lst_zel[replicant - 3][1]
-            elif key == 2:
-                count2 += lst_zel[replicant - 3][2]
-            else:
-                for i in range(lst_zel[replicant - 3][key]):
-                    repl(key, lst_zel)
-
-    except RuntimeError:
-        count1 = 0
-        count2 = 0
+    for key in lst_zel[replicant - 3].keys():
+        if sum_x < 0:
+            count1 = 0
+            count2 = 0
+            return
+        if key == 1:
+            count1 += lst_zel[replicant - 3][1]
+        elif key == 2:
+            count2 -= lst_zel[replicant - 3][2]
+        else:
+            for i in range(lst_zel[replicant - 3][key]):
+                repl(key, lst_zel)
 
 
 sum=0
