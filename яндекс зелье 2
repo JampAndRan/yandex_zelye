@@ -55,9 +55,6 @@ for n in range(len(lst_zel)):
 q=int(input())
 
 for i in range(q):
-    sum_x=sum+1
-    count1=0
-    count2=0
     zapros=[int(j) for j in input().split()]
     u=llst[zapros[2]-3][1]
     v=llst[zapros[2]-3][2]
